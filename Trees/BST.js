@@ -60,5 +60,13 @@ class BinarySearchTree {
         }
         return false;
     }
+
+    BFS() {
+        let data = [];
+        let queue = [];
+        queue.push(this.root);
+
+        
+    }
 }
 
