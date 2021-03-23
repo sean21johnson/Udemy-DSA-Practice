@@ -58,6 +58,62 @@ function countUniqueValues(arr) {
     return pointerOne + 1;
 }
 
-let arr = [1,1,1,3,4,4,5,6,18]
+// Write a function called averagePair. Given a sorted array of integers and a target average, determine if there is a pair of values in the array where the average pair equals
+// the target average. There may be more than one pair that matches the average target
+function averagePair(arr, avg) {
+    // use a multiple pointer approach
+    // one pointer will start at index 0 and the other at the last element (arr.length - 1)
+    // use a while loop to go through the array comparing the elements at each pointer
+        // if the average value of the two elements is equal to the avg argument
+            // return true
+        // if the average value of the two elements is less than the avg argument
+            // increase pointerOne
+        // if the average value of the two elements is more than the avg argument
+            // decrease pointerTwo
+    // if we break out of the loop, return false because there was no match
 
-console.log(countUniqueValues(arr))
+    let pointerOne = 0
+    let pointerTwo = arr.length - 1;
+
+    while (pointerOne < pointerTwo) {
+        let average = (arr[pointerOne] + arr[pointerTwo]) / 2;
+        if (average === avg) return true;
+        else if (average < avg) pointerOne++
+        else {
+            pointerTwo--;
+        }
+    }
+
+    return false;
+}
+
+// Write a function called isSubsequence which takes in two strings and checks whether the characters in the 1st string form a subsequence of the characters in the 2nd string.
+// In other words, the function should check whether the characters in the 1st string appear somewhere in the 2nd string, without their order changing
+function isSubsequence(str1, str2) {
+    // multiple pointer approach
+    // edge case - if str1 length is greater than str2 length, return false
+    // delcare pointerOne and set to 0
+    // declare pointerTwo and set to 0
+    // initiate a while loop which will go until pointerTwo gets through each character in str2
+        // if pointerOne's value + 1 is equal to the length of str1, return true
+        // each time there is a match of a character, increase each pointer
+        // if there is no match of a character, increase only pointerTwo
+        
+    if (str1.length > str2.length) return false;
+
+    let pointerOne = 0;
+    let pointerTwo = 0;
+
+    while (pointerTwo < str2.length) {
+        if ((pointerOne + 1) === str1.length) return true;
+        if (str1[pointerOne] === str2[pointerTwo]) {
+            pointerOne++;
+            pointerTwo++
+        }
+        else {
+            pointerTwo++
+        }
+    }
+
+    return false;
+}

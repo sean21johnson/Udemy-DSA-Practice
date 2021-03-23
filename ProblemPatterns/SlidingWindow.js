@@ -1,22 +1,28 @@
-function maxSubarraySum(arr, num) {
-    let maxSum = 0;
-    let tempSum = 0;
+// Given an array of integers and a number, write a function called maxSubarraySum which finds the maximum sum of a subarray with the length of the number passed to the function
+function maxSubarraySum(arr, n) {
+    // ensure the the length of the array being passed in is greater than the value of n
+    // set current total to the sum of the first n-1 elements of the array
+    
 
-    if (arr.length < num) return null;
-
-    for (let i = 0; i < num; i++) {
-        maxSum += arr[i];
+    if (arr.length < n) {
+        return null;
+    }
+    
+    let currentTotal = 0;
+    for (let i = 0; i < n; i++) {
+        currentTotal += arr[i];
     }
 
-    tempSum = maxSum;
+    let max = currentTotal;
 
-    for (let i = num; i < arr.length; i++) {
-        tempSum = tempSum - arr[i - num] + arr[i];
-
-        maxSum = Math.max(maxSum, tempSum)
+    for (let i = 1; i < arr.length - n + 1; i++) {
+        currentTotal = currentTotal - arr[i - 1] + arr[i + n - 1]
+        max = Math.max(currentTotal, max)
     }
 
-    return maxSum;
+    return max;
+
 }
 
-console.log(maxSubarraySum([2,6,9,2,1,8,5,6,3], 3))
+
+console.log(maxSubarraySum([200,300,400,500,600,700], 3))

@@ -56,6 +56,62 @@ function validAnagram(str1, str2) {
     return true;
 }
 
+// Write a function called sameFrequency. Given two positive integers, find out if the two numbers have the same frequency of digits. 
+function sameFrequency(int1, int2) {
+    // turn the integers into strings
+    // if the integers aren't the same length return false (edge case)
+    // declare an empty object as a frequency counter variable
+    // loop through each digit in int1 and record the digit as the key in the frequency counter object and the # of times it occurs as the value
+    // we're then going to loop through the digits in int2 and compare to what's in the frequency counter
+        // if the digit does not exist or the value is 0, return false
+        // if the digit does exist, reduce the value by 1
+    // otherwise return true
+    int1 = int1.toString();
+    int2 = int2.toString();
+
+    if (int1.length !== int2.length) return false;
+
+    let freqCounter = {};
+
+    for (let character of int1) {
+        freqCounter[character] = ++freqCounter[character] || 1;
+    }
+
+    for (let character of int2) {
+        if (!freqCounter[character] || freqCounter[character] === 0) return false;
+        else {
+            freqCounter[character]--
+        }
+    }
+
+    return true;
+}
+
+
+// Frequency Counter OR Multiple Pointers
+// Implement a function called 'areThereDuplicates' which accepts a variable number of arguments and checks where there are any duplicates among the arguments passed in
+function areThereDuplicates() {
+    // declare an empty array checkCharacter
+    // remember that we can use the keyword 'arguments' which represents the variable number of arguments passed in
+    // loop through the arguments 1 by 1 and see if the checkCharacters array includes this argument
+        // if it does include the argument, return true
+        // if it does not include the argument, push the argument into the checkCharacters array
+    // if we break out of the loop return false
+
+    let checkCharacters = [];
+  
+    for (let i = 0; i < arguments.length; i++) {
+        if (checkCharacters.includes(arguments[i])) {
+            return true;
+        }
+        else {
+            checkCharacters.push(arguments[i]);
+        }
+    }
+    
+    return false;
+}
+
 
 
 
