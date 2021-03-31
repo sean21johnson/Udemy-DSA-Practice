@@ -1,3 +1,5 @@
+// add insertionSort
+
 function insertionSort(arr){
 	var currentVal;
     for(var i = 1; i < arr.length; i++){
@@ -10,4 +12,4 @@ function insertionSort(arr){
     return arr;
 }
 
-insertionSort([2,1,9,76,4])
+console.log(insertionSort([2,1,9,76,4]))
