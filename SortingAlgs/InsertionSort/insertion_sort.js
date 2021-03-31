@@ -1,4 +1,4 @@
-// add insertionSorts
+// add insertionSorted
 
 function insertionSort(arr){
 	var currentVal;
