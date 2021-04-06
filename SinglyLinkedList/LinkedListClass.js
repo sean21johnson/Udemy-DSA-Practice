@@ -165,6 +165,7 @@ class SinglyLinkedList {
         return removedNode;
     }
 
+    // reverse the nodes in a linked list
     reverse() {
         let node = this.head;
         this.head = this.tail;
