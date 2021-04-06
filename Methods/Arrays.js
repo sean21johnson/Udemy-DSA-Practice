@@ -15,3 +15,15 @@
 
 // .filter()
 // Creates a new array with all elements that pass the test implemented by the provided function
+
+// .find()
+// Returns the first value of the first element in the provided array that satisfies the provided testing function
+
+// .findIndex()
+// Returns the index of the first element in the array that satisfies the provided testing function. Otherwise it returns -1 if no element passes the test
+
+// .flat()
+// Creates a new array with all sub-array elements concatenated into it recursively up to the specified length
+
+// .flatMap()
+// Returns a new array formed by applying a given callback function to each element of the array and then flattening the result by one level

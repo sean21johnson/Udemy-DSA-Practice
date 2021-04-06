@@ -15,3 +15,12 @@
 
 // Object.freeze()
 // This method freezes an object. A frozen object can no longer be changed. It returns the same object that was passed in.
+
+// Object.fromEntries()
+// This method transforms a list of key-value pairs into an object (essentially the opposite of Object.entries())
+
+// Object.getOwnPropertyDescriptor() 
+// Returns an object describing the configuration of a specific property on an object (descriptors: value, writable, get, set, configurable, enumerable, etc.)
+
+// Object.getOwnPropertyDescriptors()
+// Returns all own property descriptors of a given object

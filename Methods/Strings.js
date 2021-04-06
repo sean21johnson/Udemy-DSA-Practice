@@ -15,3 +15,12 @@
 
 // .indexOf()
 // This method returns the index within the string of the first occurrence of the specified value. It returns -1 if not found
+
+// .lastIndexOf()
+// Returns the index within the calling string object of the last occurrence of the specified value, searching backwards from fromIndex. Returns -1 if value is not found
+
+// .localeCompare()
+// Returns a number indicating whether a reference string comes before, or after, or is the same as teh given string in sort order
+
+// .match()
+// Retrieves the result of a matching string against a regular expression (regex)
