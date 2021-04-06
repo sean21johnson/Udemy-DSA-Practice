@@ -108,7 +108,7 @@ class SinglyLinkedList {
         return currentNode;
     }
 
-    // change the value of a node based on it's position in the LinkedList
+    // change the value of a node based on it's position in the LinkedLists
     set(index, val) {
         let theNode = this.get(index);
 
